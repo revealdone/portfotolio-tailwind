@@ -2,26 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-    <link
-    rel="stylesheet"
-    href="./font-awesome-4.7.0/css/font-awesome.min.css"
-  />
-  <link
-  rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
-/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio Tailwind CSS</title>
-    <link rel="stylesheet" href="/main.css" />
     <link href="dist/output.css" rel="stylesheet" />
 </head>
-
 <body>
 <!-- header start  -->
 <header class="bg-transparent absolute top-0 left-0 w-full flex 
 items-center z-10">
 <div class="container">
-
     <div class="flex items-center justify-between relative">
         <div class="px-4">
             <a href="#home" class="font-bold text-lg
@@ -34,35 +23,32 @@ items-center z-10">
                 <span class="hamburger-line transition duration-300 ease-in-out origin-bottom-left"></span>
             </button>
 
-            <nav id="nav-menu" class="hidden absolute py-5 bg-transparent
+            <nav id="nav-menu" class="hidden absolute py-5 bg-white
                 shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static lg:bg-transparent 
                 lg:max-w-full lg:shadow-none lg:rounded-none">
                 <ul class="block lg:flex">
                     <li class="group">
-                        <a href="#about" class="bg-white
-                         shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static text-base text-dark
-                        py-4 mx-8 flex group-hover:text-primary ">TentangSaya</a>
+                        <a href="#home" class="text-base text-dark
+                        py-2 mx-8 flex group-hover:text-primary">Beranda</a>
                     </li>
                     <li class="group">
-                        <a href="#home" class=" bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static text-base text-dark
-                        py-4 mx-8 flexgroup-hover:text-primary ">Beranda</a>
+                        <a href="#about" class="text-base text-dark
+                        py-2 mx-8 flex group-hover:text-primary">TentangSaya</a>
                     </li>
                     <li class="group">
-                        <a href="#portfolio" class=" bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static text-base text-dark
-                        py-4 mx-8 flexx group-hover:text-primary">Portfolio</a>
+                        <a href="#portfolio" class="text-base text-dark
+                        py-2 mx-8 flex group-hover:text-primary">Portfolio</a>
                     </li>
                     <li class="group">
-                        <a href="#client" class=" bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static text-base text-dark
-                        py-4 mx-8 flex group-hover:text-primary">Client</a>
-                    </li>
-
-                    <li class="group">
-                        <a href="#contact" class=" bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static text-base text-dark
-                        py-4 mx-8 flex group-hover:text-primary">Contact</a>
+                        <a href="#client" class="text-base text-dark py-2 mx-8 flex group-hover:text-primary">Client</a>
                     </li>
                     <li class="group">
-                        <a href="#contact" class=" bg-white shadow-lg rounded-lg max-w-[250px] w-full right-4 top-full lg:block lg:static text-base text-dark
-                        py-4 mx-8 flex group-hover:text-primary">Contact</a>
+                        <a href="#blog" class="text-base text-dark
+                        py-2 mx-8 flex group-hover:text-primary">Blog</a>
+                    </li>
+                    <li class="group">
+                        <a href="#contact" class="text-base text-dark
+                        py-2 mx-8 flex group-hover:text-primary">Contact</a>
                     </li>
                 </ul>
             </nav>
@@ -166,8 +152,6 @@ items-center z-10">
 
     <!-- portfolio section start -->
     <section id="portfolio" class="pt-36 pb-16 bg-slate-100">
-        <div class="banner">
-
         <div class="container">
             <div class="w-full px-4">
                 <div class="max-w-xl mx-auto text-center mb-16">
@@ -180,136 +164,17 @@ items-center z-10">
                         Dengan FilmGratisFest, Anda dapat mengeksplorasi koleksi film terlengkap dari berbagai genre, mulai dari aksi, petualangan, romantis, hingga film-film klasik yang tak terlupakan. Tanpa biaya langganan, tanpa iklan mengganggu, kami menyajikan pengalaman menonton yang bebas stres dan tak terbatas.
                         Duduklah dengan nyaman di rumah dan nikmati tontonan berkualitas tinggi dengan resolusi terbaik. 
                     </div>
+            </div>
+            <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
+                <div class="mb-12 p-4 md:w-1/2">
+                    <div class="rounded-md shadow-md overflow-hidden">
+                        <img src="dist/foto/3g.png" alt="E-Commerce"
+                        width="w-full">
+                    </div>
+                    <h3 class="font-semibold text-xl text-dark nt-5
+                    mb-3 ">E-Commerce</h3>
+                    <p class="font-medium text-base text-secondary">Tunggu apa lagi? Segera kunjungi Wahidfilm dan temukan film-film paling epic dan menghibur dalam bahasa Indonesia, hanya di E-commerce terbaik untuk para pecinta film seja</p>
                 </div>
-                
-                <div class="carousel-box">
-                    <div class="carousel">
-                        <div class="w-full px-4 flex flex-wrap justify-center xl:w-10/12 xl:mx-auto">
-                        <!-- 1 -->
-                    <div class="mb-12 p-4 md:w-1/2">
-                          <div
-                            class="carousel-item"
-                            onclick="changeBg('bg-header-bg.jpg', 'header-bg');"
-                          >
-                          <div class="content header-bg active">
-                            <img src="./img/bg-header-bg.jpeg" alt="" class="movie-title" />
-                            <h4>
-                              <span>2023</span><span><i>12+</i></span> <span>2h 14min</span><span>Geser untuk mengganti Thema</span><span>Click Pada gambar</span>
-                            </h4>
-                            
-                            <p>
-                              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt ab
-                              accusamus soluta fugit quod ratione possimus? Incidunt praesentium
-                              architecto impedit officia nam, quis ipsam modi necessitatibus
-                              delectus eligendi nostrum mollitia!
-                              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Optio similique dignissimos expedita veritatis. Harum hic explicabo labore unde totam vero illo fugiat aliquid quae saepe, placeat dolore temporibus officia. Aliquam, et nihil labore reprehenderit numquam perferendis? Nemo dolores eaque nulla veritatis. Voluptatibus obcaecati error ullam odit tenetur, expedita nesciunt voluptates.
-                            </p>
-                            <div class="button">
-                              <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Watch</a>
-                              <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
-                            </div>
-                          </div>
-                            <img src="./img/bg-header-bg.jpeg" alt="" />
-                            <a href="">click disini</a>
-                          </div>
-                          <!-- 2 -->
-                          <!-- naruto -->
-                          <div
-                            class="carousel-item"
-                            onclick="changeBg('bg-naruto.jpeg', 'naruto');"
-                          >
-                          <div class="content naruto">
-                            <img src="./img/bg-naruto.jpeg" alt="" class="movie-title" />
-                            <div class="iu">
-                            <h4>
-                              <span>2009</span><span><i>12+</i></span><span>191h 40min</span
-                              ><span>Anime</span>
-                            </h4>
-                        </div>
-                            <p>
-                                Dua belas tahun yang lalu, pernah ada seekor rakasa jahat yang dikenal sebagai Rubah Iblis Ekor Sembilan. Suatu malam, rubah itu menyerang desa konoha.dan membunuh banyak orang tak bersalah. Tak satu pun ninja dari Konoha yang bisa menghentikannya, sehingga pemimpin desa, Hokage ke 4  ikut ambil bagian untuk menyelamatkan desa, dan mempertaruhkan nyawanya untuk menyegel Ekor Sembilan ke dalam anak laki-laki yang baru lahir. Plot dari bagian kedua dari manga dan anime seri Naruto, berjudul Naruto: Shippūden (疾風伝; Secara harfiah berarti "Badai Sejarah") di anime dan dikenal sebagai Bagian II di manga, menceritakan dua setengah tahun setelah waktu di Bagian I. pengaturan baru untuk seri dimulai dengan volume yang 28 (bab 245) dari manga. Adaptasi anime dari manga mulai ditayangkan pada tanggal 15 Februari 2007, tampil perdana dengan dua episode pertama memulai debutnya pada satu-jam khusus. Viz bekerja pada serangkaian DVD Amerika Utara dari Naruto: Shippūden, yang dirilis pada tanggal 29 September, 2009. AS mempublikasi manga dimulai pada bulan Januari 2008, dalam edisi Shonen Jump AS
-                            </p>
-                            <div class="button">
-                              <a href="#"><i class="fa fa-play" aria-hidden="true"></i>Watch</a>
-                              <a href="#"><i class="fa fa-plus" aria-hidden="true"></i>My List</a>
-                            </div>
-                          </div>
-                          <img src="./img/bg-naruto.jpeg" alt=""  />
-                          </div>
-                          <!-- 3 -->
-                          <!-- hustel -->
-                          <div
-                            class="carousel-item"
-                            onclick="changeBg('bg-hustel.jpg', 'hustel');"
-                          >
-                          <div class="content hustel">
-                            <img src="./img/bg-hustel.jpg" alt="" class="movie-title" />
-                    <div class="iy">
-                            <h4>
-                              <span>2005</span><span><i>13+</i></span> <span>1h 39min</span
-                              ><span>Comedi</span>
-                            </h4>
-                    </div>
-                        <div>
-                            <p>
-                                Kung Fu Hustle merupakan film laga komedi dengan latar China era 1940-an. Film ini mengisahkan perubahan sikap Sing (Stephen Chow) yang amat baik ketika kecil dan menjadi jahat bahkan kriminal ketika dewasa.
-                                Kondisi ekonomi membuat Sing ingin menjadi anggota geng kapak merah yang dikuasai Sum (Danny Chan). Geng tersebut ingin mencoba menguasai kota dan menghabisi semua orang yang hendak menghalangi rencana mereka.
-                                Demi menjadi anggota, beberapa tantangan harus dilalui. Tantangan pertama adalah mencuri. Sing bersama sahabatnya, Bone, berhasil melewati tantangan itu.
-                                antangan meningkat. Kali ini, mereka harus bisa membebaskan pendekar mematikan, The    Beast (Bruce Leung Siu Lung), yang berada di rumah sakit jiwa.
-                            </p>
-                        </div>
-                          </div>
-                            <img src="./img/bg-hustel.jpg" alt="" />
-                          </div>
-                          <!-- always -->
-                          <div
-                            class="carousel-item"
-                            onclick="changeBg('bg-always.jpg', 'always');"
-                          >
-                          <div class="content always">
-                            <img src="./img/bg-always.jpg" alt="" class="movie-title" />
-                    <div class="io">
-                            <h4>
-                              <span>2011</span><span><i>17+</i></span> <span>1h 48min</span
-                              ><span>Romance</span>
-                            </h4>
-                    </div>
-                        <div class="ip">
-                            <p>
-                                Always ,merupakan film yang cukup populer pada masanya, sebab menyandingkan aktor aktris termasyhur Korea Selatan, So Ji-sub dan Han Hyo-joo, sebagai pemeran utama. Film garapan Sutradara Song Il-gon ini dirilis pada 20 Oktober 2011 dan menjadi film pembuka Festival Film Internasional Busan pada 6 Oktober 2011 silam. Film bergenre romansa dan melodrama ini berfokus pada kehidupan seorang mantan petinju bernama Jang Cheol-min (So Ji-sub) yang beralih profesi menjadi penjaga parkir. Dia tak sengaja bertemu dengan Ha Jung-hwa (Han Hyo-joo), seorang gadis buta yang tiba-tiba datang ke pos parkir tempatnya bekerja dan memberikan sebuah makanan.
-
-                                Ha Jung-hwa mengira orang di dalam pos tersebut adalah ahjussi (panggilan untuk laki-laki berusia di atas 30 tahun/paman) yang sering menemaninya menonton drama di televisi setelah pulang bekerja. Namun, ternyata ahjussi tersebut sudah berhenti dan digantikan oleh Jang Cheol-min.
-                            </p>
-                        </div>
-
-                          </div>
-                            <img src="./img/bg-always.jpg" alt="" />
-                          </div>
-                          <!--end always -->
-                          <!-- 4 -->
-                          <!-- starwas -->
-                          <div class="carousel-item" onclick="changeBg('bg-starwas.jpg', 'starwas');">
-                            <div class="content starwas">
-                                <img src="./img/bg-starwas.jpg" alt="" class="movie-title" />
-                                <h4>
-                                  <span>2019</span><span><i>13+</i></span> <span>2h 22min</span
-                                  ><span>Action</span>
-                                </h4>
-                                
-                                <p class="mb-10">
-                                    Setelah 40 tahun melanglang buana, petualangan saga Skywalker akhirnya harus diakhiri. Hal ini ditandai dengan ditayangkannya Star Wars: The Rise Of Skywalker yang diproduksi Lucasfilms. Film ini tayang menyapa penikmat film di Indonesia mulai hari ini Rabu (18/12/2019) di seluruh bioskop Tanah Air.
-                                    JJ Abrams yang masih dipercaya sebagai sutradara menyuguhkan pertarungan menegangkan sekaligus memberi jawaban atas teka-teki karakter utama Rey (Daisy Ridley).Cerita dalam film ini masih berkutat dengan pertarungan yang melelahkan antara dark side dan light side
-                                </p>
-
-                              </div>
-                            <img src="./img/bg-starwas.jpg" alt="" />
-                          </div>
-                          <!-- 5 end -->
-                        </div>
-                      </div>
-                    </div>
-                </div>
-</div>
                 <div class="mb-12 p-4 md:w-1/2">
                     <div class="rounded-md shadow-md overflow-hidden">
                         <img src="dist/foto/2.png" alt="Technical Documentation"
@@ -379,9 +244,7 @@ items-center z-10">
             </div>
 
         </div>
-
-    </section>  
-
+    </section>    
     <!-- foptfolio section end -->
 
     <!-- client section start -->
@@ -677,14 +540,7 @@ items-center z-10">
         </div>
     </footer>
     <!-- footer end -->
-    <script src="https://code.jquery.com/jquery-3.7.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="/script.js"></script>
-    <script>
-      $(document).ready(function () {
-        $(".carousel").carousel();
-      });
-    </script>
+
     <script src="dist/js/script.js"></script>
     </body>
 </html>
