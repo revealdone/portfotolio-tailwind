@@ -1,4 +1,27 @@
+<?php  
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, 'https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=UCYM5fTvdMRtgY8UrlyLL0Qw&key=AIzaSyBG4x5IZq4YrA1WYSLfQ0_S_CG0-zxPTzA');
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+$result = curl_exec($curl);
+curl_close($curl);
 
+$result = json_decode($result,true);
+
+$youtubeProfilePic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
+$channelName = $result['items'][0]['snippet']['title'];
+?>
+<?php  
+$curl = curl_init();
+curl_setopt($curl, CURLOPT_URL, 'https://v1.nocodeapi.com/porto/instagram/PXkGSSsExdCqOjMa');
+curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
+$result = curl_exec($curl);
+curl_close($curl);
+
+$result = json_decode($result,true);
+
+$profilPic = $result['items'][0]['snippet']['thumbnails']['medium']['url'];
+$profilName = $result['data'][0]['username'];
+?>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -127,24 +150,14 @@ items-center z-10">
                     <div class="row justify-content-center">
                         <div class="col-md-5">
                             <div class="row">
-                                <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl 
-                                    g:pt-10 ">APIs Dari youtube & Instagram</h3>   
-                                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
-                                        My youtube channel
-                                    </p>
-                                <div id="youtube-data" class="flex items-center mb-6">
+                                <div class="flex items-center mb-10">
                                     
-                                    <img src="${youtubeProfilePic}" alt="${channelName} profile picture" title="${channelName} profile picture"  class=" w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"><h5 class="mr-6">${channelName}</h5>
+                                    <img src="<?= $youtubeProfilePic; ?>" class=" w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"><h5 class="mr-6">revealdone</h5>
                                     
+                                    
+                                
                                 </div>
-                                <div  class="g-ytsubscribe mb-10" data-channelid="UCYM5fTvdMRtgY8UrlyLL0Qw" data-layout="full" data-theme="dark" data-count="hidden"></div>
-                                <p class="font-medium text-base text-secondary mb-6 mt-10 lg:text-lg">
-                                    My Instagram
-                                </p>
-                                <div id="instagram-profile" class="flex items-center mb-10">
-                                    <img src="${instagramProfilePic}" alt="${instagramUsername}" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"><h5>${instagramUsername}</h5>
-                                    <!-- <span>${followers} followers</span> -->
-                                </div>
+                                
                             </div>
                         </div>
                         <div class="col-md-5"></div>
@@ -614,50 +627,6 @@ items-center z-10">
     </footer>
     <!-- footer end -->
 
-    <script>
-        const apiKey = 'AIzaSyBG4x5IZq4YrA1WYSLfQ0_S_CG0-zxPTzA';  // Gunakan API key yang telah Anda berikan
-    const channelId = 'UCYM5fTvdMRtgY8UrlyLL0Qw';
-
-    // Memanggil API YouTube
-    fetch(`https://www.googleapis.com/youtube/v3/channels?part=snippet,statistics&id=${channelId}&key=${apiKey}`)
-        .then(response => response.json())
-        .then(data => {
-            // Mendapatkan data yang dibutuhkan dari API
-            const channelData = data.items[0];
-            const youtubeProfilePic = channelData.snippet.thumbnails.medium.url;
-            const channelName = channelData.snippet.title;
-
-            // Menampilkan data di dalam elemen HTML
-            document.getElementById('youtube-data').innerHTML = `
-                <img src="${youtubeProfilePic}" alt="${channelName} profile picture" title="${channelName} profile picture" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-                <h5 class="mr-6">${channelName}</h5>
-            `;
-        })
-        .catch(error => {
-            console.error('Error fetching YouTube data:', error);
-        });
-    </script>
-    <script>
-        // URL API Instagram
-        const apiUrl = 'https://v1.nocodeapi.com/porto/instagram/PXkGSSsExdCqOjMa';
-    
-        // Fetch data dari API Instagram
-        fetch(apiUrl)
-          .then(response => response.json()) // Mengubah hasil ke JSON
-          .then(data => {
-            // Mengambil username dan media_url dari data
-            const instagramProfilePic = data.data[0].media_url;
-            const instagramUsername = data.data[0].username;
-    
-            // Menampilkan data dalam HTML
-            document.getElementById('instagram-profile').innerHTML = `
-              <img src="${instagramProfilePic}" alt="${instagramUsername}" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white">
-              <h5>${instagramUsername}</h5>
-            `;
-          })
-          .catch(error => console.log('error', error)); // Menangani kesalahan
-    </script>
     <script src="dist/js/script.js"></script>
-    <script src="https://apis.google.com/js/platform.js"></script>
     </body>
 </html>
