@@ -78,7 +78,7 @@ items-center z-10">
 
                     <button type="button" class="text-base font-semibold text-white
                     bg-primary py-3 px-8 rounded-full hover:shadow-lg
-                    hover:opacity-80 transition duration-300 ease-in-out mb-5" id="tombol34">Hubungi 
+                    hover:opacity-80 transition duration-300 ease-in-out mb-5" id="tombol1">Hubungi 
                     Saya</button>
                     <button type="button" class="text-base font-semibold text-white
                     bg-primary py-3 px-8 rounded-full hover:shadow-lg
@@ -623,13 +623,15 @@ items-center z-10">
     <script src="http://localhost:8080/jquery/jquery.js"></script>
     <script src="http://localhost:8080/jquery/jquery-3.7.1.min.js"></script>
     <script src="dist/js/sweetalert2.all.min.js"></script>
-    <script>$(document).ready(function () {
+    <script>
+    $(document).ready(function () {
+
         $("#tombol3456").click(function () {
             let timerInterval;
-            Swal.fire({
-  title: "Dalam pengembangan",
-  html: "Akan segera di tutup dalam <b></b> milliseconds.",
-  timer: 3000,
+Swal.fire({
+  title: "Auto close alert!",
+  html: "I will close in <b></b> milliseconds.",
+  timer: 2000,
   timerProgressBar: true,
   didOpen: () => {
     Swal.showLoading();
@@ -649,23 +651,11 @@ items-center z-10">
 });
   });
 
-  $("#tombol34").click(function () {
-            Swal.fire({
-  title: "Custom animation with Animate.css",
-  showClass: {
-    popup: `
-      animate__animated
-      animate__fadeInUp
-      animate__faster
-    `
-  },
-  hideClass: {
-    popup: `
-      animate__animated
-      animate__fadeOutDown
-      animate__faster
-    `
-  }
+  $("#tombol1").click(function () {
+    Swal.fire({
+  title: "Dalam Pengembangan",
+  text: "Terimakasih telah mencoba!",
+  icon: "success"
 });
   });
   $("#tombol345").click(function () {
@@ -674,10 +664,10 @@ items-center z-10">
   width: 600,
   padding: "3em",
   color: "#fff",
-  background: "url(/dist/foto/itaci.jpg) no-repeat",
+  background: "url(itaci.jpg) no-repeat",
   backdrop: `
     rgba(0,0,123,0.4)
-    url("/dist/foto/cat.gif")
+    url("cat.gif")
     left top
     no-repeat
   `
