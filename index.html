@@ -8,6 +8,7 @@
     <title>Portfolio Tailwind CSS</title>
     <link href="dist/output.css" rel="stylesheet" />
     <link rel="stylesheet" href="w3.css">
+    <link rel="stylesheet" href="/dist/js/sweetalert2.min.css">
 
 </head>
 <body>
@@ -618,14 +619,15 @@ items-center z-10">
     </footer>
     <!-- footer end -->
     <script src="dist/js/jquery-3.7.1.min.js"></script>
+    <script src="dist/js/jquery.js"></script>
     <script src="http://localhost:8080/jquery/jquery.js"></script>
+    <script src="http://localhost:8080/jquery/jquery-3.7.1.min.js"></script>
     <script src="dist/js/sweetalert2.all.min.js"></script>
     <script>$(document).ready(function () {
         $("#tombol3456").click(function () {
             let timerInterval;
             Swal.fire({
   title: "Dalam pengembangan",
-  text: "Terimakasih telah mencoba!",
   html: "Akan segera di tutup dalam <b></b> milliseconds.",
   timer: 3000,
   timerProgressBar: true,
@@ -647,16 +649,32 @@ items-center z-10">
 });
   });
 
+  $("#tombol34").click(function () {
+            Swal.fire({
+  title: "Custom animation with Animate.css",
+  showClass: {
+    popup: `
+      animate__animated
+      animate__fadeInUp
+      animate__faster
+    `
+  },
+  hideClass: {
+    popup: `
+      animate__animated
+      animate__fadeOutDown
+      animate__faster
+    `
+  }
 });
-    </script>
-    <script>$(document).ready(function () {
-        $("#tombol345").click(function () {
+  });
+  $("#tombol345").click(function () {
             Swal.fire({
   title: "Terimakasih, Telah, mencoba.",
-  width: 300,
+  width: 600,
   padding: "3em",
   color: "#fff",
-  background: "url(/dist/foto/itaci.jpg)",
+  background: "url(/dist/foto/itaci.jpg) no-repeat",
   backdrop: `
     rgba(0,0,123,0.4)
     url("/dist/foto/cat.gif")
@@ -668,35 +686,7 @@ items-center z-10">
 
 });
     </script>
-    <script>$(document).ready(function () {
-        $("#tombol34").click(function () {
-    let timerInterval;
-Swal.fire({
-    title: "Dalam pengembangan",
-    text: "Terimakasih telah mencoba!",
-  html: "Akan segera di tutup dalam <b></b> milliseconds.",
-  timer: 3000,
-  timerProgressBar: true,
-  didOpen: () => {
-    Swal.showLoading();
-    const timer = Swal.getPopup().querySelector("b");
-    timerInterval = setInterval(() => {
-      timer.textContent = `${Swal.getTimerLeft()}`;
-    }, 100);
-  },
-  willClose: () => {
-    clearInterval(timerInterval);
-  }
-}).then((result) => {
-  /* Read more about handling dismissals below */
-  if (result.dismiss === Swal.DismissReason.timer) {
-    console.log("I was closed by the timer");
-  }
-});
-  });
 
-});
-    </script>
     <script>
         const apiKey = 'AIzaSyBG4x5IZq4YrA1WYSLfQ0_S_CG0-zxPTzA';  // Gunakan API key yang telah Anda berikan
     const channelId = 'UCYM5fTvdMRtgY8UrlyLL0Qw';
