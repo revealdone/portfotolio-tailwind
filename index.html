@@ -75,10 +75,14 @@ items-center z-10">
                     , <span class="text-dark"> ya kan?
                     </span></p>
 
-                    <a href="#" class="text-base font-semibold text-white
+                    <button type="button" class="text-base font-semibold text-white
                     bg-primary py-3 px-8 rounded-full hover:shadow-lg
-                    hover:opacity-80 transition duration-300 ease-in-out" >Hubungi 
-                    Saya</a>
+                    hover:opacity-80 transition duration-300 ease-in-out" id="tombol34">Hubungi 
+                    Saya</button>
+                    <button type="button" class="text-base font-semibold text-white
+                    bg-primary py-3 px-8 rounded-full hover:shadow-lg
+                    hover:opacity-80 transition duration-300 ease-in-out" id="tombol345">Mau coba click? 
+                    </button>
             </div>
             <div class="w-full self-end px-4 lg:w-1/2">
                 <div class="relative mt-10 lg:mt-9 lg:right-0 ">
@@ -505,7 +509,7 @@ items-center z-10">
                 <div class="w-full px-4">
                     <button class="text-base font-semibold text-white
                     bg-primary py-3 px-8 rounded-full w-full
-                    hover:opacity-80 hover:shadow-lg translition duration-500">Kirim</button>
+                    hover:opacity-80 hover:shadow-lg translition duration-500" id="tombol3456">Kirim</button>
                 </div>
                 </div>
             </form>
@@ -613,7 +617,67 @@ items-center z-10">
         </div>
     </footer>
     <!-- footer end -->
+    <script src="dist/js/jquery-3.7.1.min.js"></script>
+    <script src="http://localhost:8080/jquery/jquery.js"></script>
+    <script src="dist/js/sweetalert2.all.min.js"></script>
+    <script>$(document).ready(function () {
+        $("#tombol3456").click(function () {
+            Swal.fire({
+  title: "Dalam pengembangan",
+  text: "Terimakasih telah mencoba!",
+  icon: "success"
+});
+  });
 
+});
+    </script>
+    <script>$(document).ready(function () {
+        $("#tombol345").click(function () {
+            Swal.fire({
+  title: "Terimakasih, Telah, mencoba.",
+  width: 300,
+  padding: "3em",
+  color: "#fff",
+  background: "#fff url(/dist/foto/itaci.jpg)",
+  backdrop: `
+    rgba(0,0,123,0.4)
+    url("/dist/foto/cat.gif")
+    left top
+    no-repeat
+  `
+});
+  });
+
+});
+    </script>
+    <script>$(document).ready(function () {
+        $("#tombol34").click(function () {
+    let timerInterval;
+Swal.fire({
+  title: "Terimakasih telah mencoba",
+  html: "Akan segera di tutup dalam <b></b> milliseconds.",
+  timer: 2000,
+  timerProgressBar: true,
+  didOpen: () => {
+    Swal.showLoading();
+    const timer = Swal.getPopup().querySelector("b");
+    timerInterval = setInterval(() => {
+      timer.textContent = `${Swal.getTimerLeft()}`;
+    }, 100);
+  },
+  willClose: () => {
+    clearInterval(timerInterval);
+  }
+}).then((result) => {
+  /* Read more about handling dismissals below */
+  if (result.dismiss === Swal.DismissReason.timer) {
+    console.log("I was closed by the timer");
+  }
+});
+  });
+
+});
+    </script>
     <script>
         const apiKey = 'AIzaSyBG4x5IZq4YrA1WYSLfQ0_S_CG0-zxPTzA';  // Gunakan API key yang telah Anda berikan
     const channelId = 'UCYM5fTvdMRtgY8UrlyLL0Qw';
@@ -657,6 +721,7 @@ items-center z-10">
           })
           .catch(error => console.log('error', error)); // Menangani kesalahan
     </script>
+    <script src="dist/js/sweetalert2.all.min.js"></script>
     <script src="dist/js/script.js"></script>
     <script src="https://apis.google.com/js/platform.js"></script>
     </body>
