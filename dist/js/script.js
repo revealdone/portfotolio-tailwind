@@ -80,6 +80,25 @@ function carousel1() {
   setTimeout(carousel1, 2000); // Change image every 2 seconds
 }
 
+var myIndex8 = 0;
+carousel8();
+
+function carousel8() {
+  var i;
+  var x = document.getElementsByClassName("mySlides8");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+  }
+  myIndex8++;
+  if (myIndex8 > x.length) {
+    myIndex8 = 1;
+  }
+  x[myIndex8 - 1].style.display = "block";
+  setTimeout(carousel8, 3000); // Change image every 2 seconds
+}
+
+// slideer
+
 // slide 2
 var slideIndex = 1;
 showDivs(slideIndex);
