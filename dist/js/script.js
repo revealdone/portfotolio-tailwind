@@ -130,3 +130,35 @@ function showDivs(n) {
   x[slideIndex - 1].style.display = "block";
   dots[slideIndex - 1].className += " w3-white";
 }
+
+// baru 
+// text-base text-dark py-2 mx-8 flex group-hover:text-primary
+document.addEventListener("DOMContentLoaded", function () {
+  const sections = document.querySelectorAll("section");
+  const navLinks = document.querySelectorAll("#nav-menu .nav-link");
+
+  const activateNavLink = () => {
+    let scrollPosition = window.scrollY + 200; // Adjust for better visibility
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.offsetHeight;
+      const sectionId = section.getAttribute("id");
+
+      if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
+        navLinks.forEach((link) => {
+          link.classList.remove("bg-primary", "text-white", "font-bold"); // Reset semua link
+          link.classList.add("text-gray-800", "font-semibold"); // Gaya default
+          if (link.getAttribute("href").includes(sectionId)) {
+            link.classList.add("bg-primary", "text-white", "font-bold"); // Aktifkan yang sesuai
+          }
+        });
+      }
+    });
+  };
+
+  // Attach scroll and load events
+  window.addEventListener("scroll", activateNavLink);
+  window.addEventListener("load", activateNavLink);
+});
+
