@@ -138,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const navLinks = document.querySelectorAll("#nav-menu .nav-link");
 
   const activateNavLink = () => {
-    let scrollPosition = window.scrollY + 200; // Adjust for better visibility
+    let scrollPosition = window.scrollY + 200; // Adjust posisi scroll
 
     sections.forEach((section) => {
       const sectionTop = section.offsetTop;
@@ -147,18 +147,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (scrollPosition >= sectionTop && scrollPosition <= sectionTop + sectionHeight) {
         navLinks.forEach((link) => {
-          link.classList.remove("bg-primary", "text-white", "font-bold"); // Reset semua link
+          link.classList.remove("bg-primary", "text-white", "font-bold", "h-screen"); // Reset semua gaya navbar
           link.classList.add("text-gray-800", "font-semibold"); // Gaya default
           if (link.getAttribute("href").includes(sectionId)) {
-            link.classList.add("bg-primary", "text-white", "font-bold"); // Aktifkan yang sesuai
+            link.classList.add("bg-primary", "text-white", "font-bold", "h-screen"); // Tambahkan gaya aktif
           }
         });
       }
     });
   };
 
-  // Attach scroll and load events
+  // Attach scroll dan load events
   window.addEventListener("scroll", activateNavLink);
   window.addEventListener("load", activateNavLink);
 });
+
 
