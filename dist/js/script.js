@@ -164,20 +164,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 // ini swiper
-const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
-  loop: true,
-  on: {
-    slideChangeTransitionStart: function () {
-      const slides = document.querySelectorAll('.swiper-slide');
-      slides.forEach(slide => slide.style.animation = 'none'); // Reset animasi
-    },
-    slideChangeTransitionEnd: function () {
-      const activeSlide = document.querySelector('.swiper-slide-active');
-      activeSlide.style.animation = 'slideInFromTop 0.5s ease-out';
-    },
-  },
-});
+// const swiper = new Swiper('.swiper', {
+//   direction: 'horizontal',
+//   loop: true,
+//   on: {
+//     slideChangeTransitionStart: function () {
+//       const slides = document.querySelectorAll('.swiper-slide');
+//       slides.forEach(slide => slide.style.animation = 'none'); // Reset animasi
+//     },
+//     slideChangeTransitionEnd: function () {
+//       const activeSlide = document.querySelector('.swiper-slide-active');
+//       activeSlide.style.animation = 'slideInFromTop 0.5s ease-out';
+//     },
+//   },
+// });
 
 
 // 

@@ -10,10 +10,12 @@ module.exports = {
       colors: {
         primary: "#14b8a6",
         secondary: "#64748b",
+        
         sot: "#E195AB",
         ini: "#0f172a",
         dark: "#3D3D3D",
       },
+      
       screens: {
         "2xl": "1320px",
       },
