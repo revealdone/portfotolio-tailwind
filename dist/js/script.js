@@ -163,3 +163,58 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
+// ini swiper
+const swiper = new Swiper('.swiper', {
+  direction: 'horizontal',
+  loop: true,
+  on: {
+    slideChangeTransitionStart: function () {
+      const slides = document.querySelectorAll('.swiper-slide');
+      slides.forEach(slide => slide.style.animation = 'none'); // Reset animasi
+    },
+    slideChangeTransitionEnd: function () {
+      const activeSlide = document.querySelector('.swiper-slide-active');
+      activeSlide.style.animation = 'slideInFromTop 0.5s ease-out';
+    },
+  },
+});
+
+
+// 
+// document.addEventListener("DOMContentLoaded", function () {
+// var i = 0;
+// var txt = 'Programmer ✔'; /* The text */
+// var speed = 50; /* The speed/duration of the effect in milliseconds */
+
+// function typeWriter() {
+//   if (i < txt.length) {
+//     document.getElementById("demo").innerHTML += txt.charAt(i);
+//     i++;
+//     setTimeout(typeWriter, speed);
+//   }
+// }
+// });
+
+// 
+$(document).ready(function () {
+  var txt = 'Programmer ✔  Web Developer';  // Teks yang akan diketik
+  var speed = 100; // Kecepatan ketikan (ms)
+  var i = 0;
+  
+  function typeWriter() {
+    if (i < txt.length) {
+      $('#demo').append(txt.charAt(i));
+      i++;
+      setTimeout(typeWriter, speed); // Menunggu sesuai kecepatan sebelum mengetik karakter berikutnya
+    } else {
+      setTimeout(function() {
+        $('#demo').text('');  // Menghapus teks setelah selesai
+        i = 0; // Reset ke indeks awal
+        typeWriter(); // Mulai ulang efek
+      }, 1000); // Delay 1 detik sebelum memulai ulang
+    }
+  }
+
+  typeWriter(); // Panggil fungsi untuk pertama kali
+});
+

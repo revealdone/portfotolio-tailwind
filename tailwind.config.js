@@ -11,11 +11,35 @@ module.exports = {
         primary: "#14b8a6",
         secondary: "#64748b",
         sot: "#E195AB",
-        dark: "#BCCCDC",
+        ini: "#0f172a",
+        dark: "#3D3D3D",
       },
       screens: {
         "2xl": "1320px",
       },
+      slideInFromTop: {
+        '0%': { transform: 'translateY(-100%)', opacity: '0' },
+        '100%': { transform: 'translateY(0)', opacity: '1' },
+      },
+    },
+    animation: {
+      slideInFromTop: 'slideInFromTop 0.5s ease-out forwards',
+    },
+    backgroundImage: {
+      'gradient-custom': 'linear-gradient(to right, #000000, #00B1F0, #000000)',
+    
+      typing: {
+        '0%': { width: '0' },
+        '100%': { width: '100%' },
+      },
+      'blink-caret': {
+        '0%, 100%': { borderColor: 'transparent' },
+        '50%': { borderColor: 'currentColor' },
+      },
+    },
+    animation: {
+      typing: 'typing 4s steps(24, end) infinite',
+      'blink-caret': 'blink-caret 1s step-end infinite',
     },
   },
   plugins: [],
