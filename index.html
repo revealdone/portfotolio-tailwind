@@ -126,7 +126,7 @@ items-center z-10">
     <section id="about" class="pt-36 pc-32">
         <div class="container">
             <div class="flex flex-wrap">
-                <div class="w-full px-4 mb-10 lg:w-1/2">
+                <div class="w-full px-4 mb-5 lg:w-1/2">
                     <h4 class="font-bold uppercase text-primary text-lg mb-3
                     ">Tentang saya</h4>
                     <h2 class="font-bold text-dark text-3xl mb-5 max-w-
@@ -135,6 +135,25 @@ items-center z-10">
                     max-w-xl lg:text-lg">
                     Jika kamu benar-benar menginginkan sesuatu,
                     lambat laun kamu pasti akan segera menemukan caranya</p>
+                    <div class="row">
+                        <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl 
+                            g:pt-10 ">Mengambil API Dari youtube</h3>   
+                            <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
+                                My youtube channel
+                            </p>
+                        <div id="youtube-data" class="flex items-center mb-6">
+                            
+                            <img src="${youtubeProfilePic}" alt="${channelName} profile picture" title="${channelName} profile picture"  class=" w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"><h5 class="mr-6">${channelName}</h5>
+                            
+                        </div>
+                        <div  class="g-ytsubscribe mb-15" data-channelid="UCYM5fTvdMRtgY8UrlyLL0Qw" data-layout="full" data-theme="dark" data-count="hidden"></div>
+                        <!-- <p class="font-medium text-base text-secondary mb-6 mt-10 lg:text-lg">
+                            My Instagram
+                        </p>
+                        <div id="instagram-profile" class="flex items-center mb-10">
+                            <img src="${instagramProfilePic}" alt="${instagramUsername}" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"><h5>${instagramUsername}</h5>
+                            <<span>${followers} followers</span> -->
+                        </div>
                 </div>
                 <div  class="w-full px-4 lg:w-1/2">
                     <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl 
@@ -144,34 +163,60 @@ items-center z-10">
                         lebih dekat dengan impianmu
                     </p>
 
-                    <div  class="row justify-content-center">
+                    <div  class="row justify-content-center mb-5">
                         <div class="col-md-5">
-                            <div class="row">
                                 <h3 class="font-semibold text-dark text-2xl mb-4 lg:text-3xl 
-                                    g:pt-10 ">Mengambil API Dari youtube</h3>   
-                                    <p class="font-medium text-base text-secondary mb-6 lg:text-lg">
-                                        My youtube channel
-                                    </p>
-                                <div id="youtube-data" class="flex items-center mb-6">
-                                    
-                                    <img src="${youtubeProfilePic}" alt="${channelName} profile picture" title="${channelName} profile picture"  class=" w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"><h5 class="mr-6">${channelName}</h5>
-                                    
-                                </div>
-                                <div  class="g-ytsubscribe mb-15" data-channelid="UCYM5fTvdMRtgY8UrlyLL0Qw" data-layout="full" data-theme="dark" data-count="hidden"></div>
-                                <!-- <p class="font-medium text-base text-secondary mb-6 mt-10 lg:text-lg">
-                                    My Instagram
-                                </p>
-                                <div id="instagram-profile" class="flex items-center mb-10">
-                                    <img src="${instagramProfilePic}" alt="${instagramUsername}" class="w-9 h-9 mr-3 rounded-full flex justify-center items-center border border-slate-300 text-slate-300 hover:border-primary hover:bg-primary hover:text-white"><h5>${instagramUsername}</h5>
-                                    <<span>${followers} followers</span> -->
-                                </div>
+                                    g:pt-10 ">Skill Set</h3>
+                                <div class="skills grid grid-cols-3-max-content rounded-full  justify-around items-end">
+
+                                    <div class=" hover:translate-y-[-1rem]">
+                                        <div class="skill_box grid place-items-center transition-transform duration-400">
+                                            <img class="w-[35px] mb-2" src="dist/svg/info-css.svg" alt="css">
+                                            <span class="skill_name text-sm mb-2">Css</span>
+                                        </div>
+                                    </div> 
+                           
+                                    <div class=" hover:translate-y-[-1rem]">
+                                        <div class="skill_box grid place-items-center transition-transform duration-400">
+                                            <img class="w-[35px] mb-2" src="dist/svg/info-javascript.svg" alt="javascript">
+                                            <span class="skill_name text-sm mb-2">javascript</span>
+                                        </div></div>
+                           
+                                        <div class=" hover:translate-y-[-1rem]">
+                                        <div class="skill_box grid place-items-center transition-transform duration-400">
+                                            <img class="w-[35px] mb-2" src="dist/svg/info-html.svg" alt="html">
+                                            <span class="skill_name text-sm mb-2">html</span>
+                                        </div></div>
+                           
+                                        <div class=" hover:translate-y-[-1rem]">
+                                        <div class="skill_box grid place-items-center transition-transform duration-400">
+                                            <img class="w-[35px] mb-2" src="dist/svg/info-git.svg" alt="git">
+                                            <span class="skill_name text-sm mb-2">git</span>
+                                        </div></div>
+                                        
+                                        <div class=" hover:translate-y-[-1rem]">
+                                        <div class="skill_box grid place-items-center transition-transform duration-400">
+                                            <img class="w-[35px] mb-2" src="dist/svg/info-github.svg" alt="github">
+                                            <span class="skill_name text-sm mb-2">github</span>
+                                        </div></div>
+                               
+                                        <div class=" hover:translate-y-[-1rem]">
+                                        <div class="skill_box grid place-items-center transition-transform duration-400">
+                                            <img class="w-[35px] mb-2" src="dist/svg/info-tailwind-css.svg" alt="tailwind-css">
+                                            <span class="skill_name text-sm mb-2">tailwind-css</span>
+                                        </div></div>
+                               
+                                    </div>
                             </div>
                         </div>
-                        <div class="col-md-5 mb-10"></div>
+                        <div class="justify-items-end">
+                        </div>
                         <!-- <div id="particles-js" class=" top-0 left-0 w-full h-full -z-10"></div> -->
+                    </div>        
+                    <div id="particles2-js"  class="col-md-5 mb-4 absolute">
+
                     </div>
-                    <div id="particles2-js"  class="col-md-5 mb-10 absolute"></div>
-                    
+
                     <div class="flex items-center">
                         <!-- youtube -->
                         <a href="https://www.youtube.com/channel/UCYM5fTvdMRtgY8UrlyLL0Qw"

@@ -15,7 +15,12 @@ module.exports = {
         ini: "#0f172a",
         dark: "#3D3D3D",
       },
-      
+      gridTemplateColumns: {
+        '3-max-content': 'repeat(3, max-content)',
+      },
+      transitionDuration: {
+        '400': '400ms',
+      },
       screens: {
         "2xl": "1320px",
       },
