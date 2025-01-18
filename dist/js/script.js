@@ -25,6 +25,29 @@ $(document).ready(function () {
   });
 });
 
+$(document).ready(function () {
+  $(window).on("scroll", function () {
+    $(".fade-in").each(function () {
+      const windowHeight = $(window).height();
+      const scrollTop = $(window).scrollTop();
+      const elementOffsetTop = $(this).offset().top;
+      const elementHeight = $(this).outerHeight();
+
+      // Cek apakah elemen masuk ke viewport
+      if (scrollTop + windowHeight > elementOffsetTop && scrollTop < elementOffsetTop + elementHeight) {
+        $(this)
+          .removeClass("opacity-0 translate-y-10")
+          .addClass("opacity-100 translate-y-0");
+      } else {
+        // Reset ke posisi awal jika elemen keluar dari viewport
+        $(this)
+          .removeClass("opacity-100 translate-y-0")
+          .addClass("opacity-0 translate-y-10");
+      }
+    });
+  });
+});
+
 //navbar fixed
 window.onscroll = function () {
   const header = document.querySelector("header");
@@ -387,3 +410,4 @@ document.addEventListener("DOMContentLoaded", function () {
     modal.style.display = "none";
   } 
   });
+  
