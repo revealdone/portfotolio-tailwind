@@ -46,6 +46,51 @@ $(document).ready(function () {
       }
     });
   });
+
+  const DATA_COUNT = 7;
+    const labels = ['Css', 'Js', 'Html', 'Php', 'tailwind', 'VisualBasic', 'Laravel/CI4'];
+    const dataFirstSkip = [1, 1, 1, 1, 23, 20, 1];
+    const dataMiddleSkip = [1, 1, 1, 25, 1, 1, 30];
+    const dataLastSkip = [35, 32, 40, 40, 1, 1, 1];
+
+    const data = {
+      labels: labels,
+      datasets: [
+        {
+          label: 'Entry Level',
+          data: dataFirstSkip,
+          borderColor: 'rgba(255, 99, 132, 1)',
+          backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        },
+        {
+          label: 'Mediun Level',
+          data: dataMiddleSkip,
+          borderColor: 'rgba(54, 162, 235, 1)',
+          backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        },
+        {
+          label: 'Advance Level',
+          data: dataLastSkip,
+          borderColor: 'rgba(75, 192, 192, 1)',
+          backgroundColor: 'rgba(75, 192, 192, 0.2)',
+        },
+      ],
+    };
+
+    const ctx = document.getElementById('radarChart');
+    new Chart(ctx, {
+      type: 'radar',
+      data: data,
+      options: {
+        scales: {
+          r: {
+            beginAtZero: true,
+          },
+        },
+      },
+    });
+
+
 });
 
 //navbar fixed
