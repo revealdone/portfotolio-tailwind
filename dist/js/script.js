@@ -23,6 +23,31 @@ $(document).ready(function () {
       }
     });
   });
+
+  const data = {
+    labels: ['logical program understanding', 'Data Visualization', 'Database Modeling'],
+    datasets: [{
+        label: 'My First Dataset',
+        data: [300, 50, 100],
+        backgroundColor: [
+            'rgb(255, 99, 132)',
+            'rgb(54, 162, 235)',
+            'rgb(255, 205, 86)'
+        ],
+        hoverOffset: 4
+    }]
+};
+
+// Konfigurasi untuk chart
+const config = {
+    type: 'doughnut', // Jenis chart: doughnut
+    data: data, // Data chart
+};
+
+// Menyiapkan chart pada canvas dengan ID radar1Chart
+const ctx = document.getElementById('radar1Chart');
+new Chart(ctx, config);
+  
 });
 
 $(document).ready(function () {
